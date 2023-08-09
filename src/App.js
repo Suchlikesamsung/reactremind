@@ -1,4 +1,3 @@
-import Expenseitem from "./components/Expenseitem";
 import Expense from "./components/Expenses";
 
 function App() {
@@ -19,8 +18,7 @@ function App() {
   ]
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <Expense data={expense} />
+      <Expense expense={expense} />
     </div>
   );
 }
