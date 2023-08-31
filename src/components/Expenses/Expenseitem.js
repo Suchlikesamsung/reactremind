@@ -1,6 +1,7 @@
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
+import { useState } from 'react'
 
 
 // function addComma(number){
@@ -8,14 +9,18 @@ import Card from '../UI/Card';
 // };
 
 
-function Expenseitem(props) {
+const Expenseitem = (props) => {
     // const expenseDate = new Date(2021,2,28);
     // const expenseValue = 19012
     // const transValue = addComma(expenseValue)
-    let title = props.title;
+
+    const [title,setTitle] = useState(props.title)
+
+
     const clickHandler = () => {
-        title = '됫나용?'
+        setTitle('hello!')
     }
+
     console.log(props)
     return <>
         <Card className="expense-item">
